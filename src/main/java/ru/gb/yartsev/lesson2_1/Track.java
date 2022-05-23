@@ -1,4 +1,4 @@
-package lesson2_1;
+package ru.gb.yartsev.lesson2_1;
 
 public class Track implements Obstacle{
 
@@ -8,12 +8,8 @@ public class Track implements Obstacle{
         this.length = length;
     }
 
-    public Integer getLength() {
-        return length;
-    }
-
     @Override
-    public void overcome(Player player) {
+    public void overcome(Participant player) {
         player.run(this);
     }
 }

@@ -1,10 +1,10 @@
-package lesson2_1;
+package ru.gb.yartsev.lesson2_1;
 
 public class Wall implements Obstacle{
 
-    private Integer height;
+    private int height;
 
-    public Wall(Integer height) {
+    public Wall(int height) {
         this.height = height;
     }
 
@@ -13,7 +13,7 @@ public class Wall implements Obstacle{
     }
 
     @Override
-    public void overcome(Player player) {
+    public void overcome(Participant player) {
         player.jump(this);
     }
 }
