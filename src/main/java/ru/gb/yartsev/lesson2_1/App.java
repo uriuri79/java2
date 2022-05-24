@@ -4,19 +4,19 @@ public class App {
     public static void main(String[] args) {
 
         Participant[] players = new Participant[] {
-          new Cat(6, 110),
-          new Cat(4, 90),
-          new Human(10, 210),
-          new Human(8, 150),
-          new Robot(3,50),
-          new Robot(2, 40)
+          new Cat("Барсик", 6, 110),
+          new Cat("Мурзик", 4, 90),
+          new Human("Иван Иванович",10, 210),
+          new Human("Петр Петрович", 8, 150),
+          new Robot("Робокоп", 3,50),
+          new Robot("Робоход", 2, 40)
         };
 
         Obstacle[] obstacles = new Obstacle[] {
            new Track(50),
-           new Wall(3),
-           new Track(100),
            new Wall(5),
+           new Track(100),
+           new Wall(7),
            new Track(200)
         };
 
