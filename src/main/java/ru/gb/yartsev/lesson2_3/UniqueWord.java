@@ -6,7 +6,7 @@ public class UniqueWord {
 
     private Map<String, Integer> createHashMap() {
         Map<String, Integer> myHashMap = new HashMap<>();
-        for (String word : Objects.requireNonNull(myArray)) {
+        for (String word : myArray) {
             int value = myHashMap.getOrDefault(word, 0) + 1;
             myHashMap.put(word, value);
         }
