@@ -40,10 +40,12 @@ public class CollectionApp {
                 To tell Lucy’s story – our story – properly, we need to go back to when she was a baby, before I 
                 knew her. With the help of records we’ve been able to piece together Lucy’s early life, so here is 
                 her story, right from the start...
-                """.toLowerCase().split("[\\p{Space}\\p{Punct}]+");
+                """.toLowerCase().split("[\\p{Space}\\p{Punct}\\p{Pd}]+");
 
         final List<String> wordList = Arrays.asList(myArrayWords);
         final Set<String> uniqueWords = new HashSet<>(wordList);
+        System.out.println();
+        System.out.println("Список уникальных слов: ");
         for (String s : uniqueWords) {
             System.out.println(s);
         };
@@ -52,7 +54,7 @@ public class CollectionApp {
         for (String s : wordList) {
             map.merge(s, 1, Integer::sum);
         }
-
+        System.out.println();
         map.forEach((K, V) -> System.out.println("Слово \"" + K + "\" встречается " + V + " раз"));
     }
 }
